@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Breadcrumb from '../../app/components/Breadcrumb';
+import { PlusOutlined, MoreOutlined } from '@ant-design/icons'
 
 import { useAppSelector, useAppDispatch } from '../../app/hooks';
 import {
@@ -20,6 +22,7 @@ export function Counter() {
 
   return (
     <div>
+      <Breadcrumb actions={[<PlusOutlined />, <MoreOutlined />]} />
       <div className={styles.row}>
         <button
           className={styles.button}

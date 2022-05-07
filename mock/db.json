@@ -1,0 +1,38 @@
+{
+	"scope": [
+		{
+			"id": "scope1",
+			"name": "Scope 1",
+			"children": [
+				{
+					"id": "scope1-1",
+					"name": "Scope 1 - Child 1",
+					"children": [
+						{
+							"id": "scope1-1-1",
+							"name": "Scope 1 - Child 1 - Child 1"
+						},
+						{
+							"id": "scope1-1-2",
+							"name": "Scope 1 - Child 1 - Child 2"
+						}
+					]
+				},
+				{
+					"id": "scope1-2",
+					"name": "Scope 1 - Child 2",
+					"children": [
+						{
+							"id": "scope1-2-1",
+							"name": "Scope 1 - Child 2 - Child 1"
+						},
+						{
+							"id": "scope1-2-2",
+							"name": "Scope 1 - Child 2 - Child 2"
+						}
+					]
+				}
+			]
+		}
+	]
+}

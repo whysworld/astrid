@@ -1,0 +1,9 @@
+.ant-custom-dropdown-menu {
+  font-size: 14px;
+  font-variant: initial;
+  background-color: #fff;
+  border-radius: 2px;
+  outline: none;
+  box-shadow: 0 3px 6px -4px rgb(0 0 0 / 12%), 0 6px 16px 0 rgb(0 0 0 / 8%), 0 9px 28px 8px rgb(0 0 0 / 5%);
+  color: rgba(0, 0, 0, 0.85);
+}
