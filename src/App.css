@@ -45,8 +45,7 @@
 **/
 
 /** Menu Start **/
-.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected,
-.ant-menu:not(.ant-menu-horizontal) .ant-menu-item:hover {
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
   background-color: #17bebb;
 }
 .ant-menu-submenu-popup > .ant-menu {
@@ -64,11 +63,78 @@
 }
 /** Menu End **/
 
-/** Custom Dropdown Menu Start **/
+/** Custom Dropdown Menu Start **/ 
 
+.ant-custom-dropdown-menu .ant-menu:not(.ant-menu-horizontal) .ant-menu-item:hover {
+  background-color: #17bebb60;
+  font-weight: normal;
+  color: rgba(0,0,0,0.85);
+}
+.ant-custom-dropdown-menu .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background-color: #17bebb !important;
+}
+.ant-select-single.ant-select-show-arrow .ant-select-selection-item, 
+.ant-select-single.ant-select-show-arrow .ant-select-selection-placeholder,
+.ant-menu-title-content {
+  /* color: #666; */
+  font-size: 16px;
+}
+.ant-menu-item-selected .ant-menu-title-content {
+  color: white;
+}
 /** Custom Dropdown Menu End **/
 
 .ant-select:not(.ant-select-customize-input) .ant-select-selector {
   border-radius: 5px;
 }
+.ant-select-item {
+  min-height: 40px;
+}
 
+.ant-select-item-option-content {
+  font-size: 16px;
+}
+.ant-select-item-option-active:not(.ant-select-item-option-disabled) {
+  background-color: #17bebb60;
+}
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+  background-color: #17bebb;
+  font-weight: normal;
+  color: white;
+}
+
+
+.ant-select-tree-title {
+  font-size: 18px;
+  line-height: 40px;
+}
+.ant-select-tree .ant-select-tree-node-content-wrapper.ant-select-tree-node-selected {
+  background-color: transparent;
+  transition-duration: 0;
+}
+
+.ant-select-tree .ant-select-tree-node-content-wrapper.ant-select-tree-node-selected .ant-select-tree-title {
+  color: white;
+}
+
+.ant-select-tree .ant-select-tree-treenode {
+  height: 40px;
+  align-items: center;
+}
+.ant-select-tree .ant-select-tree-treenode-selected {
+  background-color: #17bebb;
+}
+.ant-select-tree .ant-select-tree-treenode-selected .ant-select-tree-switcher {
+  color: white;
+}
+.ant-select-tree-switcher {
+  line-height: 40px;
+}
+.ant-select-tree .ant-select-tree-node-content-wrapper:hover {
+  background-color: #17bebb60;
+  line-height: 40px;
+}
+.ant-select-tree .ant-select-tree-node-content-wrapper {
+  line-height: 38px;
+  height: 38px;
+}

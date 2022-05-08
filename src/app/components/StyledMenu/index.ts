@@ -6,8 +6,11 @@ const StyledMenu = styled(Menu)`
 		color: rgba(0,0,0,0.85);
 	}
 	.ant-menu-item:not(:last-child) {
-		margin: 0
+		margin: 0;
 	}
+  .ant-menu-item {
+    margin: 0;
+  }
 `
 
 export default StyledMenu

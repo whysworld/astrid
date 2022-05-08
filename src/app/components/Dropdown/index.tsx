@@ -1,10 +1,10 @@
-import React, { ReactNode, useState } from 'react'
+import React, { ReactNode, useRef, useState } from 'react'
 import { Button, Dropdown as AntDropdown } from 'antd'
 import { Scrollbars } from 'react-custom-scrollbars-2';
 import styled from 'styled-components';
 import { DownOutlined } from '@ant-design/icons'
+import delay from 'lodash/delay'
 
-import { DATA_FETCH_INTERVAL } from '../../../utils/constants'
 import { Pair } from '../../../types';
 import StyledMenu from '../StyledMenu';
 import './style.css'
@@ -29,13 +29,17 @@ const AnchorWrapper = styled(Button)`
 		padding: 0 10px;
 	}
 `
+const OverlayWrapper = styled.div`
+	display: flex;
+`
 interface IProps {
 	data: Pair[];
 	icon: ReactNode;
 	width?: number;
 }
 const Dropdown: React.FC<IProps> = ({ data, icon, width = 100 }) => {
-	const [interval, setInterval] = useState<string>(`${DATA_FETCH_INTERVAL[0].label}|${DATA_FETCH_INTERVAL[0].value}`)
+	const [interval, setInterval] = useState<string>(`${data[0].label}|${data[0].value}`)
+	const scrollbarElement = useRef<any>(null)
 
 	const onIntervalChange = (value: string) => {
 		setInterval(value)
@@ -50,13 +54,22 @@ const Dropdown: React.FC<IProps> = ({ data, icon, width = 100 }) => {
 		/>
 	);
 
+	const scrollToTop = () => {
+		if (scrollbarElement?.current)
+			scrollbarElement.current.scrollTop(0)
+	}
+	const onVisibleChange = (value: boolean) => {
+		if (value) delay(scrollToTop, 100)
+	}
+
 	return (
 		<AntDropdown
-			overlay={<div><Scrollbars style={{ height: 200 }}>{menu}</Scrollbars></div>}
+			overlay={<OverlayWrapper><Scrollbars ref={scrollbarElement} style={{ height: 200 }}>{menu}</Scrollbars></OverlayWrapper>}
 			trigger={['click']}
 			overlayClassName='ant-custom-dropdown-menu'
 			placement={'bottomRight'}
 			overlayStyle={{ minWidth: width }}
+			onVisibleChange={onVisibleChange}
 		>
 			<AnchorWrapper>
 				<a onClick={e => e.preventDefault()}>
