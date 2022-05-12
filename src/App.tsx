@@ -1,10 +1,12 @@
 import React from 'react'
-import { Counter } from './features/counter/Counter';
 import { Layout } from 'antd'
-import Header from './app/components/Header';
-import SideBar from './app/components/Sidebar';
-import './App.css';
-import Dashboard from './app/containers/Dashboard';
+import Header from './app/components/Header'
+import SideBar from './app/components/Sidebar'
+import './App.css'
+import Dashboard from './app/containers/Dashboard'
+
+import './styles/dark.less'
+import './styles/light.less'
 
 const { Content } = Layout
 
