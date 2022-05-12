@@ -10,7 +10,7 @@ import History from '../History'
 import Notification from '../Notification'
 import User from './components/User'
 import ThemeSelect from './components/ThemeSelect'
-import TimeSelect from './components/TimeSelect'
+import ThemezoneSelect from './components/TimezoneSelect'
 
 const Header = () => {
 	return (
@@ -23,7 +23,7 @@ const Header = () => {
 			<Notification />
 			<User />
 			<ThemeSelect />
-			<TimeSelect />
+			<ThemezoneSelect />
 		</StyledHeader>
 	)
 }

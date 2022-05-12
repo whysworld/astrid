@@ -27,7 +27,7 @@ const menu = (
     ]}
   />
 );
-const ThemeSelect = () => {
+const ThemezoneSelect = () => {
   return (
     <>
       <Dropdown
@@ -40,4 +40,4 @@ const ThemeSelect = () => {
   )
 }
 
-export default ThemeSelect
+export default ThemezoneSelect
