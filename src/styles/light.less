@@ -1,8 +1,68 @@
-// @import '~antd/lib/style/color/colorPalette.less';
-// @import '~antd/dist/antd.less';
-// @import '~antd/lib/style/themes/default.less';
-@import '~antd/lib/style/themes/default.less';
-@import '~antd/dist/antd.less';
+.light {
+  @import './default.less';
 
-@primary-color: #00adb5;
-@border-radius-base: 4px;
+  @bg-header:#e5eff8;
+  @bg-sider: #0064c8;
+  @bg-header-item: white;
+  @bg-breadcrumb: white;
+  @bg-content: white;
+  @color-header-item: #666;
+  @color-sider: white;
+  @border-color-header: #d6d6d6;
+
+  .ant-layout-header.header {
+    background-color: @bg-header;
+    border-bottom: 1px solid @border-color-header;
+
+    .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+      background-color: @bg-header-item;
+      color: @color-header-item;
+      border: none;
+    }
+    .ant-btn {
+      background-color: @bg-header-item;
+      border: none;
+      color: @color-header-item;
+    }
+    .anticon {
+      color: @color-header-item;
+    }
+  }
+  .search {
+    background-color: @bg-header-item;
+  }
+  .sider {
+    background-color: @bg-sider;
+  }
+  .menu {
+    background-color: @bg-sider;
+
+    .ant-menu-submenu {
+      color: @color-sider;
+    }
+    .ant-menu-submenu-arrow {
+      color: @color-sider;
+    }
+  }
+  .ant-menu-submenu-popup > .ant-menu {
+    background-color: @bg-sider;
+  }
+  .breadcrumb{
+    background-color: @bg-breadcrumb;
+    color: @color-header-item;
+
+    .ant-select:not(.ant-select-customize-input) .ant-select-selector{
+      background-color: transparent;
+      color: @color-header-item;
+    }
+    .anticon {
+      color: @color-header-item;
+    }
+    .ant-btn-circle {
+      background-color: transparent;
+    }
+  }
+  .content {
+    background-color: @bg-content;
+  }
+}

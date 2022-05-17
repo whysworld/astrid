@@ -11,7 +11,6 @@ const Wrapper = styled.div`
 	flex-direction: row;
 	align-items: center;
 	border-radius: 5px;
-	background: white;
 	min-width: 200px;
 	height: 30px;
 	padding: 0 10px;
@@ -43,12 +42,8 @@ const Wrapper = styled.div`
 		left: 0 !important;
 
 		.ant-popover-inner {
-			// margin-top: -14px;
 			box-shadow: 0 3px 6px -4px rgb(0 0 0 / 12%), 0 6px 16px 0 rgb(0 0 0 / 8%), 0 9px 28px 8px rgb(0 0 0 / 5%);
 			color: rgba(0, 0, 0, 0.85);
-		}
-		.ant-popover-arrow {
-			// display: none;
 		}
 	}
 `
@@ -72,7 +67,7 @@ const Search = () => {
 	)
 	return (
 		<>
-			<Wrapper ref={wrapperRef}>
+			<Wrapper ref={wrapperRef} className='search'>
 				<SearchOutlined className='search' />
 				<Select
 					bordered={false}

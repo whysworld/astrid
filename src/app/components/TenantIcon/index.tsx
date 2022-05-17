@@ -5,7 +5,6 @@ import styled from 'styled-components'
 const StyledButton = styled(Button)`
 	width: 40px;
 	height: 30px;
-	background-color: white;
 	border-radius: 5px;
 	display: flex;
 	align-items: center;

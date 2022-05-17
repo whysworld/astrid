@@ -48,9 +48,7 @@
 .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
   background-color: #17bebb;
 }
-.ant-menu-submenu-popup > .ant-menu {
-  background-color: #0064c8;
-}
+
 .ant-menu-vertical .ant-menu-item {
   color: white;
 }

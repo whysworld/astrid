@@ -14,7 +14,7 @@ import ThemezoneSelect from './components/TimezoneSelect'
 
 const Header = () => {
 	return (
-		<StyledHeader>
+		<StyledHeader className='header'>
 			<TenantIcon />
 			<Location />
 			<Search />

@@ -39,7 +39,7 @@ const Menu = () => {
 	]
 
 	return (
-		<StyledMenu defaultSelectedKeys={['1']} mode="vertical" items={items} />
+		<StyledMenu className='menu' defaultSelectedKeys={['1']} mode="vertical" items={items} />
 	)
 }
 

@@ -1,10 +1,8 @@
 import styled from 'styled-components'
 import { Layout } from 'antd'
-import { colors } from '../../../../themes/theme'
 const { Sider } = Layout
 
 const StyledSider = styled(Sider)`
-	background-color: ${colors.primary};
 	padding: 0;
 	display: flex;
 	flex-direction: column-reverse;

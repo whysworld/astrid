@@ -14,7 +14,7 @@ const App = () => {
   return (
     <Layout style={{ minHeight: '100vh' }}>
       <SideBar />
-      <Layout className="site-layout" style={{ background: "white" }}>
+      <Layout className="content">
         <Header />
         <Content>
           <Dashboard />

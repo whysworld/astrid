@@ -15,7 +15,7 @@ const Label = styled.span`
 `
 const Breadcrumb: React.FC<IProps> = ({ label = 'Dashboard', actions = null, selects = null }) => {
 	return (
-		<StyledBreadcrumb>
+		<StyledBreadcrumb className='breadcrumb'>
 			<Row>
 				<Col span={12}>
 					<Space size={5}>
