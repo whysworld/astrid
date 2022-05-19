@@ -26,14 +26,16 @@ const ThemezoneSelect = () => {
     }
   }, [theme])
 
-  const changeTheme = () => {
-    console.log('theme: ', theme)
-    setTheme(theme === 'light' ? 'dark' : 'light');
+  const changeTheme = (value: any) => {
+    console.log('theme: ', value)
+    // setTheme(theme === 'light' ? 'dark' : 'light');
+    setTheme(value.key)
   }
   const menu = (
     <StyledMenu
       selectable={true}
       onSelect={changeTheme}
+      defaultSelectedKeys={['light']}
       items={[
         {
           label: 'light',

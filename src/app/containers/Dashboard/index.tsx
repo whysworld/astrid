@@ -1,18 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {
 	MoreOutlined,
 	PlusOutlined,
 } from '@ant-design/icons'
+import { useSearchParams } from 'react-router-dom'
 import { Button, Space, Select } from 'antd'
 import Breadcrumb from '../../components/Breadcrumb'
 
 const { Option } = Select;
 
 const Dashboard = () => {
+	const [searchParams, setSearchParams] = useSearchParams({});
+	const [dashboard, setDashboard] = useState<string>('Dashboard1')
 
-	const onDashboardChange = () => {
-		console.log('onDashboardChange')
+	const onDashboardChange = (value: string) => {
+		setDashboard(value)
 	}
+	useEffect(() => {
+		const newSearchParams = new URLSearchParams(searchParams)
+		newSearchParams.set('dashboard', dashboard)
+		setSearchParams(newSearchParams)
+	}, [dashboard])
 	const onItemAdd = () => {
 		console.log('onItemAdd')
 	}
@@ -23,10 +31,10 @@ const Dashboard = () => {
 		</Space>
 	)
 	const selects = (
-		<Select defaultValue="lucy" style={{ width: 'auto', borderRadius: '5px' }} onChange={onDashboardChange} bordered>
-			<Option value="jack">Dashboard 1</Option>
-			<Option value="lucy">Dashboard 2</Option>
-			<Option value="Yiminghe">Dashboard 3</Option>
+		<Select defaultValue="Dashboard1" style={{ width: 'auto', borderRadius: '5px' }} onChange={onDashboardChange} bordered>
+			<Option value="Dashboard1">Dashboard 1</Option>
+			<Option value="Dashboard2">Dashboard 2</Option>
+			<Option value="Dashboard3">Dashboard 3</Option>
 		</Select>
 	)
 	return (

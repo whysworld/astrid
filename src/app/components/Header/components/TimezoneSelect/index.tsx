@@ -16,11 +16,14 @@ const AnchorWrapper = styled.div`
 	align-items: center;
 	justify-content: center;
 
-	a {
+	div.timer {
 		height: 30px;
 		display: flex;
 		align-items: center;
-		color: rgba(0,0,0,0.85);
+
+    &:hover {
+      cursor: pointer;
+    }
 	}
 `
 const times: Pair[] = [
@@ -57,9 +60,9 @@ const TimeSelect = () => {
 
   useEffect(() => {
     if (timezone === 'Browser Time')
-      setTime(moment.tz(date, moment.tz.guess()).format('ddd, hh:mm:ss A'))
+      setTime(moment.tz(date, moment.tz.guess()).format('ddd, hh:mm A'))
     else
-      setTime(moment.tz(date, 'Africa/Accra').format('ddd, hh:mm:ss A'))
+      setTime(moment.tz(date, 'Africa/Accra').format('ddd, hh:mm A'))
   }, [date, timezone])
   return (
     <AntDropdown
@@ -70,10 +73,10 @@ const TimeSelect = () => {
       overlayStyle={{ minWidth: 150 }}
     >
       <AnchorWrapper>
-        <a onClick={e => e.preventDefault}>
+        <div className='timer' onClick={e => e.preventDefault}>
           <>{time}</>
           <DownOutlined style={{ marginLeft: 5, fontSize: 12 }} />
-        </a>
+        </div>
       </AnchorWrapper>
     </AntDropdown>
   )

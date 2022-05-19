@@ -1,6 +1,7 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { TreeSelect } from 'antd'
 import styled from 'styled-components'
+import { createSearchParams, useLocation, useSearchParams } from 'react-router-dom'
 import { positionValues, Scrollbars } from 'react-custom-scrollbars-2'
 import { EditOutlined } from '@ant-design/icons'
 import './style.css'
@@ -24,12 +25,28 @@ const TreeItemWrapper = styled.div`
 	align-items: center;
 `
 const Location = () => {
-	const [value, setValue] = useState(undefined)
 	const scrollbarElement = useRef<any>(null)
 	const [scrollTop, setScrollTop] = useState<Number>(0)
+	const [tenant, setTenant] = useState<string>('yankees')
+	const [location, setLocation] = useState<string>('yankees')
+	const [searchParams, setSearchParams] = useSearchParams({loc: location, tenant: tenant});
+	console.log("searchParams: ", searchParams.toString())
 
-	const onChange = () => {
-		setValue(value)
+	useEffect(() => {
+		console.log("location changed: ", location)
+		const newSearchParams = new URLSearchParams(searchParams)
+		newSearchParams.set('loc', location)
+		setSearchParams(newSearchParams)
+	}, [location])
+	useEffect(() => {
+		console.log("tenant changed: ", tenant)
+		const newSearchParams = new URLSearchParams(searchParams)
+		newSearchParams.set('tenant', tenant)
+		setSearchParams(newSearchParams)
+	}, [tenant])
+
+	const onChange = (loc: any, labelList: any, extra: any) => {
+		setLocation(loc)
 	}
 	const onTreeExpand = (keys: any) => {
 		//force to hide scrollbar
@@ -45,8 +62,8 @@ const Location = () => {
 	return (
 		<StyledTreeSelect
 			showSearch
+			className='location'
 			style={{ width: '220px' }}
-			value={value}
 			onTreeExpand={onTreeExpand}
 			dropdownRender={(menu) => (
 				<Scrollbars
@@ -64,16 +81,16 @@ const Location = () => {
 			treeDefaultExpandAll
 			treeDataSimpleMode
 			onChange={onChange}
-			defaultValue="parent 1"
+			defaultValue={location}
 			virtual={false}
 		>
-			<TreeNode value="parent 1" title={<TreeItemWrapper><span>parent 1</span><EditOutlined className='action' style={{ paddingRight: 10 }} onClick={onEdit} /></TreeItemWrapper>} >
-				<TreeNode value="parent 1-0" title="parent 1-0">
-					<TreeNode value="leaf1" title="leaf1" />
-					<TreeNode value="leaf2" title="leaf2" />
+			<TreeNode value="yankees" title={<TreeItemWrapper><span>yankees</span><EditOutlined className='action' style={{ paddingRight: 10 }} onClick={onEdit} /></TreeItemWrapper>} >
+				<TreeNode value="nyc" title="nyc">
+					<TreeNode value="town1" title="town1" />
+					<TreeNode value="town2" title="town2" />
 				</TreeNode>
-				<TreeNode value="parent 1-1" title="parent 1-1">
-					<TreeNode value="leaf3" title="leaf3" />
+				<TreeNode value="nyk" title="nyk">
+					<TreeNode value="riverave" title="riverave" />
 				</TreeNode>
 			</TreeNode>
 		</StyledTreeSelect>

@@ -21,7 +21,7 @@ const AnchorWrapper = styled(Button)`
 	align-items: center;
 	justify-content: center;
 
-	a {
+	div.anchor {
 		height: 30px;
 		display: flex;
 		align-items: center;
@@ -36,13 +36,16 @@ interface IProps {
 	data: Pair[];
 	icon: ReactNode;
 	width?: number;
+	onChange?: (value: string) => void;
 }
-const Dropdown: React.FC<IProps> = ({ data, icon, width = 100 }) => {
+const Dropdown: React.FC<IProps> = ({ onChange, data, icon, width = 100 }) => {
 	const [interval, setInterval] = useState<string>(`${data[0].label}|${data[0].value}`)
 	const scrollbarElement = useRef<any>(null)
 
 	const onIntervalChange = (value: string) => {
 		setInterval(value)
+		console.log("interval change: ", value)
+		if (onChange) onChange(value)
 	}
 
 	const menu = (
@@ -72,10 +75,10 @@ const Dropdown: React.FC<IProps> = ({ data, icon, width = 100 }) => {
 			onVisibleChange={onVisibleChange}
 		>
 			<AnchorWrapper>
-				<a onClick={e => e.preventDefault()}>
+				<div className='anchor' onClick={e => e.preventDefault()}>
 					{interval.split('|')[1] === '0' ? (<>{icon}</>) : (<>{interval.split('|')[0]}</>)}
 					{interval.split('|')[1] !== '0' && <DownOutlined style={{ marginLeft: 5, fontSize: 12 }} />}
-				</a>
+				</div>
 			</AnchorWrapper>
 		</AntDropdown>
 	)

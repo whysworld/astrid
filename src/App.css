@@ -71,14 +71,12 @@
 .ant-custom-dropdown-menu .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
   background-color: #17bebb !important;
 }
-.ant-select-single.ant-select-show-arrow .ant-select-selection-item, 
-.ant-select-single.ant-select-show-arrow .ant-select-selection-placeholder,
-.ant-menu-title-content {
-  /* color: #666; */
-  font-size: 16px;
-}
 .ant-menu-item-selected .ant-menu-title-content {
   color: white;
+}
+.ant-menu-title-content{
+  font-size: 16px;
+  /* font-weight: 600; */
 }
 /** Custom Dropdown Menu End **/
 

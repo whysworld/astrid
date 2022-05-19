@@ -53,9 +53,14 @@ const OverlayerWrapper = styled.div`
 const Search = () => {
 	const [mode, setMode] = useState<SearchMode>('Global')
 	const wrapperRef = useRef<HTMLDivElement>(null)
+	const [placeholder, setPlaceholder] = useState<string>('Search with natural language here')
 
 	const onSearchModeChange = (value: SearchMode) => {
 		setMode(value)
+		if(value === 'Global')
+			setPlaceholder('Search with natural language here')
+		else
+			setPlaceholder('Search by typing here')
 	}
 	const onPageFilterTrigger = () => {
 		console.log("onPageFilterTrigger")
@@ -89,7 +94,7 @@ const Search = () => {
 						<FilterFilled className='filter' style={{ color: '#17bebb' }} onClick={onPageFilterTrigger} />
 					</Popover >
 				)}
-				<Input allowClear bordered={false} placeholder={'Search by typing here'} />
+				<Input allowClear bordered={false} placeholder={placeholder} />
 			</Wrapper>
 		</>
 	)

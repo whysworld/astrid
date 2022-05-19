@@ -23,6 +23,9 @@
       background-color: @bg-header-item;
       border: none;
       color: @color-header-item;
+      .anticon {
+        font-size: 20px;
+      }
     }
     .anticon {
       color: @color-header-item;
@@ -30,9 +33,18 @@
   }
   .search {
     background-color: @bg-header-item;
+    .ant-input {
+      font-size: 16px;
+    }
   }
   .sider {
     background-color: @bg-sider;
+
+    .ant-menu-title-content,
+    .anticon {
+      font-size: 16px;
+      font-weight: 600;
+    }
   }
   .menu {
     background-color: @bg-sider;
@@ -50,10 +62,14 @@
   .breadcrumb{
     background-color: @bg-breadcrumb;
     color: @color-header-item;
+    font-size: 15px;
 
     .ant-select:not(.ant-select-customize-input) .ant-select-selector{
       background-color: transparent;
       color: @color-header-item;
+    }
+    .ant-select {
+      font-size: 15px;
     }
     .anticon {
       color: @color-header-item;
@@ -64,5 +80,12 @@
   }
   .content {
     background-color: @bg-content;
+  }
+  .timer {
+    color: @color-header-item;
+    font-size: 16px;
+  }
+  .location {
+    font-size: 18px;
   }
 }
