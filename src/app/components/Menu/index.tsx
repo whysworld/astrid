@@ -1,16 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { MenuProps } from 'antd'
 import {
 	DesktopOutlined,
 	PieChartOutlined,
-	FileOutlined,
-	TeamOutlined,
 	UserOutlined,
 } from '@ant-design/icons'
+import {
+	NavLink,
+	useLocation,
+} from 'react-router-dom'
 import StyledMenu from './components/StyledMenu'
 
 const Menu = () => {
 	type MenuItem = Required<MenuProps>['items'][number]
+	const location = useLocation();
 
 	function getItem(
 		label: React.ReactNode,
@@ -27,19 +30,16 @@ const Menu = () => {
 	}
 
 	const items: MenuItem[] = [
-		getItem('Option 1', '1', <PieChartOutlined />),
-		getItem('Option 2', '2', <DesktopOutlined />),
+		getItem(<NavLink to={'/'}>Dashboard</NavLink>, '/', <PieChartOutlined />),
+		getItem(<NavLink to={'/system'}>System</NavLink>, '/system', <DesktopOutlined />),
 		getItem('User', 'sub1', <UserOutlined />, [
-			getItem('Tom', '3'),
-			getItem('Bill', '4'),
-			getItem('Alex', '5'),
-		]),
-		getItem('Team', 'sub2', <TeamOutlined />, [getItem('Team 1', '6'), getItem('Team 2', '8')]),
-		getItem('Files', '9', <FileOutlined />),
+			getItem(<NavLink to={'/user/Tom'}>Tom</NavLink>, '/user/Tom'),
+			getItem(<NavLink to={'/user/Bill'}>Bill</NavLink>, '/user/Bill'),
+		])
 	]
 
 	return (
-		<StyledMenu className='menu' defaultSelectedKeys={['1']} mode="vertical" items={items} />
+		<StyledMenu className='custom-sider-menu' selectedKeys={[location.pathname]} mode="vertical" items={items} rootClassName='custom-sider-menu' />
 	)
 }
 

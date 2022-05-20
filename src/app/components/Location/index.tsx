@@ -75,7 +75,7 @@ const Location = () => {
 				>
 					{menu}
 				</Scrollbars>)}
-			dropdownClassName='custom-scroll'
+			dropdownClassName='custom-dropdown-tree'
 			placeholder="Please select"
 			allowClear
 			treeDefaultExpandAll

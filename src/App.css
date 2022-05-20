@@ -45,17 +45,11 @@
 **/
 
 /** Menu Start **/
-.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
-  background-color: #17bebb;
-}
 
 .ant-menu-vertical .ant-menu-item {
   color: white;
 }
-.ant-menu-light .ant-menu-item:hover, .ant-menu-light .ant-menu-item-active, .ant-menu-light .ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open, .ant-menu-light .ant-menu-submenu-active, .ant-menu-light .ant-menu-submenu-title:hover {
-  color: white;
-  background-color: #17bebb;
-}
+
 .ant-menu-submenu:hover > .ant-menu-submenu-title > .ant-menu-submenu-expand-icon, .ant-menu-submenu:hover > .ant-menu-submenu-title > .ant-menu-submenu-arrow{
   color: white;
 }
@@ -63,14 +57,6 @@
 
 /** Custom Dropdown Menu Start **/ 
 
-.ant-custom-dropdown-menu .ant-menu:not(.ant-menu-horizontal) .ant-menu-item:hover {
-  background-color: #17bebb60;
-  font-weight: normal;
-  color: rgba(0,0,0,0.85);
-}
-.ant-custom-dropdown-menu .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
-  background-color: #17bebb !important;
-}
 .ant-menu-item-selected .ant-menu-title-content {
   color: white;
 }
@@ -90,15 +76,6 @@
 .ant-select-item-option-content {
   font-size: 16px;
 }
-.ant-select-item-option-active:not(.ant-select-item-option-disabled) {
-  background-color: #17bebb60;
-}
-.ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
-  background-color: #17bebb;
-  font-weight: normal;
-  color: white;
-}
-
 
 .ant-select-tree-title {
   font-size: 18px;
@@ -117,17 +94,11 @@
   height: 40px;
   align-items: center;
 }
-.ant-select-tree .ant-select-tree-treenode-selected {
-  background-color: #17bebb;
-}
+
 .ant-select-tree .ant-select-tree-treenode-selected .ant-select-tree-switcher {
   color: white;
 }
 .ant-select-tree-switcher {
-  line-height: 40px;
-}
-.ant-select-tree .ant-select-tree-node-content-wrapper:hover {
-  background-color: #17bebb60;
   line-height: 40px;
 }
 .ant-select-tree .ant-select-tree-node-content-wrapper {

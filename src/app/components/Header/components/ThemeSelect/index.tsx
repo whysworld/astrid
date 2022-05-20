@@ -27,7 +27,7 @@ const ThemezoneSelect = () => {
   }, [theme])
 
   const changeTheme = (value: any) => {
-    console.log('theme: ', value)
+    // console.log('theme: ', value)
     // setTheme(theme === 'light' ? 'dark' : 'light');
     setTheme(value.key)
   }
@@ -52,7 +52,7 @@ const ThemezoneSelect = () => {
     <>
       <Dropdown
         overlay={<div>{menu}</div>} trigger={['click']}
-        overlayClassName='ant-custom-dropdown-menu'
+        overlayClassName='custom-dropdown-menu'
       >
         <StyledButton icon={<BgColorsOutlined />} />
       </Dropdown>

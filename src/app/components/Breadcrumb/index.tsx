@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import { Row, Col, Space } from 'antd'
 
 interface IProps {
-	label?: string;
+	labels?: string[];
 	actions?: React.ReactNode;
 	selects?: React.ReactNode;
 }
@@ -13,7 +13,7 @@ interface IProps {
 const Label = styled.span`
 
 `
-const Breadcrumb: React.FC<IProps> = ({ label = 'Dashboard', actions = null, selects = null }) => {
+const Breadcrumb: React.FC<IProps> = ({ labels = ['Dashboard'], actions = null, selects = null }) => {
 	return (
 		<StyledBreadcrumb className='breadcrumb'>
 			<Row>
@@ -21,10 +21,14 @@ const Breadcrumb: React.FC<IProps> = ({ label = 'Dashboard', actions = null, sel
 					<Space size={5}>
 						<HomeOutlined style={{ fontSize: '150%', marginRight: '5px' }} />
 						<RightOutlined style={{ fontSize: '70%', marginRight: '5px' }} />
-						<Label>{label ? label : 'Dashboard'}</Label>
+						{labels?.map(label => (
+							<span key={label}>
+								<Label>{label}</Label>
+								<RightOutlined style={{ fontSize: '70%', marginRight: '5px' }} />
+							</span>
+						))}
 						{selects ? (
 							<>
-								<RightOutlined style={{ fontSize: '70%', marginRight: '5px' }} />
 								{selects}
 							</>
 						) : <></>}

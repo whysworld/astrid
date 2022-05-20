@@ -25,8 +25,8 @@ const AnchorWrapper = styled(Button)`
 		height: 30px;
 		display: flex;
 		align-items: center;
-		color: rgba(0,0,0,0.85);
 		padding: 0 10px;
+		font-size: 16px;
 	}
 `
 const OverlayWrapper = styled.div`
@@ -69,7 +69,7 @@ const Dropdown: React.FC<IProps> = ({ onChange, data, icon, width = 100 }) => {
 		<AntDropdown
 			overlay={<OverlayWrapper><Scrollbars ref={scrollbarElement} style={{ height: 200 }}>{menu}</Scrollbars></OverlayWrapper>}
 			trigger={['click']}
-			overlayClassName='ant-custom-dropdown-menu'
+			overlayClassName='custom-dropdown-menu'
 			placement={'bottomRight'}
 			overlayStyle={{ minWidth: width }}
 			onVisibleChange={onVisibleChange}

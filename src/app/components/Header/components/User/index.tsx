@@ -36,7 +36,7 @@ const User = () => {
     <>
       <Dropdown
         overlay={<div>{menu}</div>} trigger={['click']}
-        overlayClassName='ant-custom-dropdown-menu'
+        overlayClassName='custom-dropdown-menu'
       >
         <StyledButton icon={<UserOutlined />} />
       </Dropdown>

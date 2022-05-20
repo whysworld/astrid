@@ -68,7 +68,7 @@ const TimeSelect = () => {
     <AntDropdown
       overlay={<div>{menu}</div>}
       trigger={['click']}
-      overlayClassName='ant-custom-dropdown-menu'
+      overlayClassName='custom-dropdown-menu'
       placement={'bottomRight'}
       overlayStyle={{ minWidth: 150 }}
     >

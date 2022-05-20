@@ -31,7 +31,7 @@ const Dashboard = () => {
 		</Space>
 	)
 	const selects = (
-		<Select defaultValue="Dashboard1" style={{ width: 'auto', borderRadius: '5px' }} onChange={onDashboardChange} bordered>
+		<Select defaultValue="Dashboard1" style={{ width: 'auto', borderRadius: '5px' }} onChange={onDashboardChange} bordered dropdownClassName='custom-dropdown-menu'>
 			<Option value="Dashboard1">Dashboard 1</Option>
 			<Option value="Dashboard2">Dashboard 2</Option>
 			<Option value="Dashboard3">Dashboard 3</Option>

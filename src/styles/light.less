@@ -5,6 +5,9 @@
   @bg-sider: #0064c8;
   @bg-header-item: white;
   @bg-breadcrumb: white;
+  @bg-dropdown: white;
+  @bg-selected-dropdown: #17bebb;
+  @bg-hover-dropdown: #17bebb60;
   @bg-content: white;
   @color-header-item: #666;
   @color-sider: white;
@@ -39,16 +42,34 @@
   }
   .sider {
     background-color: @bg-sider;
-    
+  }
+  .custom-sider-menu {
+    background-color: @bg-sider;
+
     .ant-menu-title-content,
     .anticon {
       font-size: 16px;
       font-weight: 600;
     }
-  }
-  .menu {
-    background-color: @bg-sider;
-
+    .ant-menu-item {
+      a {
+        color: @color-sider;
+      }
+    }
+    .ant-menu-item-selected,
+    .ant-menu-item-active {
+      background-color: @bg-selected-dropdown;
+      color: @color-sider;
+      a {
+        color: @color-sider;
+      }
+    }
+    .ant-menu-submenu-active {
+      background-color: @bg-selected-dropdown;
+      .ant-menu-submenu-title {
+        color: @color-sider;
+      }
+    }
     .ant-menu-submenu {
       color: @color-sider;
     }
@@ -87,5 +108,55 @@
   }
   .location {
     font-size: 18px;
+  }
+  .custom-dropdown-tree {
+    background-color: @bg-dropdown;
+    .ant-select-tree {
+      background-color: @bg-dropdown;
+
+      .ant-select-tree-title,
+      .anticon {
+        color: @color-header-item;
+      }
+      .ant-select-tree-treenode-selected {
+        background-color: @bg-selected-dropdown;
+
+        .ant-select-tree-title,
+        .anticon,
+        .ant-select-tree-switcher {
+          color: @color-sider;
+        }
+      }
+      .ant-select-tree-treenode:hover {
+        background-color: @bg-hover-dropdown;
+      }
+    }
+  }
+  .custom-dropdown-menu {
+    background-color: @bg-dropdown;
+    .ant-menu {
+      background-color: @bg-dropdown;
+      .ant-menu-item {
+        color: @color-header-item;
+      }
+      .ant-menu-item:hover {
+        background-color: @bg-hover-dropdown;
+      }
+      .ant-menu-item-selected {
+        background-color: @bg-selected-dropdown;
+      }
+    }
+    .ant-select-item-option-content {
+      color: @color-header-item;
+    }
+    .ant-select-item-option-selected {
+      background-color: @bg-selected-dropdown;
+      .ant-select-item-option-content {
+        color: @color-sider;
+      }
+    }
+    .ant-select-item:hover {
+      background-color: @bg-hover-dropdown;
+    }
   }
 }

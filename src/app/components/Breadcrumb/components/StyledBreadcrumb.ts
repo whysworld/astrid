@@ -20,5 +20,8 @@ const StyledBreadcrumb = styled.div`
 			}
 		}
 	}
+	.ant-space-item:last-child .anticon-right {
+		display: none;
+	}
 `
 export default StyledBreadcrumb
