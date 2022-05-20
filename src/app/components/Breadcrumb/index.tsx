@@ -22,10 +22,10 @@ const Breadcrumb: React.FC<IProps> = ({ labels = ['Dashboard'], actions = null, 
 						<HomeOutlined style={{ fontSize: '150%', marginRight: '5px' }} />
 						<RightOutlined style={{ fontSize: '70%', marginRight: '5px' }} />
 						{labels?.map(label => (
-							<span key={label}>
-								<Label>{label}</Label>
-								<RightOutlined style={{ fontSize: '70%', marginRight: '5px' }} />
-							</span>
+							<>
+								<Label key={`label-${label}`}>{label}</Label>
+								<RightOutlined key={`icon-${label}`} style={{ fontSize: '70%' }} />
+							</>
 						))}
 						{selects ? (
 							<>
