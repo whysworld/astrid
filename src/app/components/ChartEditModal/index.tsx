@@ -4,6 +4,8 @@ import { CHART_PALETTES } from './constants'
 import { LayoutModel } from "../../containers/Dashboard/hooks/useLayout";
 import { CHART_TYPES } from "./constants";
 
+import './style/index.less'
+
 const { TabPane } = Tabs;
 
 export const ChartTypes = ['Bar', 'Graph', 'Pie', 'Gauge', 'Scatter', 'Summary', 'Table']
