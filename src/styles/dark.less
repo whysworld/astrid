@@ -158,6 +158,17 @@
   }
   .ant-select-item-option-content {
     color: @color-header-item;
+    display: flex;
+    align-items: center;
+
+    span.color {
+      width: 4px;
+      height: 16px;
+
+      &:last-child {
+        margin-right: 10px;
+      }
+    }
   }
   .ant-select-item-option-selected {
     background-color: @bg-selected-dropdown;

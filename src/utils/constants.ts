@@ -40,3 +40,5 @@ export const DATA_FETCH_DURATION = [
     { label: 'Last 24 hours', value: 1440 },
     { label: 'Last 2 days', value: 2880 }
 ];
+
+export const DEV_API_ENDPOINT = 'http://localhost:5000'

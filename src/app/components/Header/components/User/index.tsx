@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Dropdown, Menu, Space } from 'antd'
+import { Button, Dropdown, Space } from 'antd'
 import styled from 'styled-components'
 import { UserOutlined, MailOutlined, LogoutOutlined } from '@ant-design/icons'
 import StyledMenu from '../../../StyledMenu'
@@ -35,7 +35,8 @@ const User = () => {
   return (
     <>
       <Dropdown
-        overlay={<div>{menu}</div>} trigger={['click']}
+        overlay={<div>{menu}</div>} 
+        trigger={['click']}
         overlayClassName='custom-dropdown-menu'
       >
         <StyledButton icon={<UserOutlined />} />

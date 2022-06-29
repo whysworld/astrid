@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { MenuProps } from 'antd'
 import {
 	DesktopOutlined,
@@ -39,7 +39,14 @@ const Menu = () => {
 	]
 
 	return (
-		<StyledMenu className='custom-sider-menu' selectedKeys={[location.pathname]} mode="vertical" items={items} rootClassName='custom-sider-menu' />
+		<StyledMenu 
+			className='custom-sider-menu' 
+			selectedKeys={[location.pathname]} 
+			mode="vertical" 
+			items={items} 
+			rootClassName='custom-sider-menu' 
+			defaultSelectedKeys={['1']} 
+		/>
 	)
 }
 

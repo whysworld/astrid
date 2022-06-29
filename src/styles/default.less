@@ -1,6 +1,23 @@
-// @import '~antd/lib/style/color/colorPalette.less';
+
+// @import '~antd/dist/antd.less';
+// @import '~antd/lib/style/default.less';
+// @import '~antd/lib/style/components.less';
+// @import '~antd/lib/style/variable.less';
+
 @import '~antd/lib/style/themes/default.less';
 
+@primary-color: #17bebb;
+
+// @menu-item-active-bg: red;
+
+.ant-layout.content {
+  width: 100%;
+}
+
+.ant-layout.ant-layout-has-sider{
+  display: flex;
+  flex-direction: row;
+}
 .ant-select-tree .ant-select-tree-node-content-wrapper:hover {
   background: transparent;
 }
@@ -10,6 +27,16 @@
 .ant-menu-inline, .ant-menu-vertical, .ant-menu-vertical-left {
   border-right: none;
 }
-.ant-select-item-option-active {
-  background-color: transparent;
+
+.ant-select-single .ant-select-selection-item {
+  display: flex;
+  align-items: center;
+  span.color {
+    width: 4px;
+    height: 16px;
+
+    &:last-child {
+      margin-right: 10px;
+    }
+  }
 }

@@ -1,0 +1,54 @@
+{
+  "color": [
+    "rgba(244, 90, 56, 0.9)",
+    "rgba(255, 184, 2, 0.9)",
+    "rgba(255, 222, 46, 0.9)",
+    "rgba(255, 137, 110, 0.9)",
+    "rgba(198, 35, 0, 0.9)",
+    "rgba(181, 130, 0, 0.9)"
+  ],
+  "legend": {
+    "type": "scroll",
+    "left": "center",
+    "textStyle": {
+      "color": "#949BB9",
+      "fontFamily": "IBM Plex Sans",
+      "fontSize": 10,
+      "fontWeight": "normal"
+    },
+    "itemGap": 20,
+    "tooltip": {
+      "show": true,
+      "trigger": "item"
+    }
+  },
+  "tooltip": {
+    "trigger": "item"
+  },
+  "grid": {
+    "top": "40px",
+    "bottom": 0,
+    "left": 0,
+    "right": 0,
+    "containLabel": true
+  },
+  "series": {
+    "type": "pie",
+    "radius": "90%",
+    "center": [
+      "50%",
+      "50%"
+    ],
+    "data": [
+      {
+        "value": 0,
+        "name": "unknown"
+      }
+    ],
+    "label": {
+      "color": "#949BB9",
+      "fontFamily": "IBM Plex Sans"
+    },
+    "top": 40
+  }
+}

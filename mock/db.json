@@ -34,5 +34,854 @@
 				}
 			]
 		}
+	],
+	"dashboard": [
+		{
+			"id": "dashboard",
+			"data": [
+				{
+					"x": 0,
+					"y": 0,
+					"w": 4,
+					"h": 2,
+					"id": "4fab326e-7436-478d-9b22-2b48033959aa",
+					"title": "Device Count",
+					"chartType": "summary",
+					"chartVariant": "with-chart",
+					"datapointCount": 9,
+					"privilege": "networking",
+					"colorPalette": "vibrant",
+					"opacity": 1,
+					"isResizable": false,
+					"isDraggable": false,
+					"color": "",
+					"options": {
+						"grid": {
+							"top": 8,
+							"right": 8,
+							"bottom": 8,
+							"left": 24
+						},
+						"xAxis": {
+							"show": false,
+							"type": "category",
+							"data": [
+								"Tue",
+								"Wed",
+								"Thu",
+								"Fri",
+								"Sat",
+								"Sun"
+							]
+						},
+						"yAxis": {
+							"show": false,
+							"type": "value"
+						},
+						"series": [
+							{
+								"data": [
+									1,
+									1,
+									1,
+									1,
+									1,
+									1
+								],
+								"type": "bar",
+								"smooth": true,
+								"color": ""
+							}
+						]
+					}
+				},
+				{
+					"x": 4,
+					"y": 0,
+					"w": 4,
+					"h": 2,
+					"id": "a7d5f658-1b26-4128-b82c-db8e33a5fcc5",
+					"title": "Wired Endpoints",
+					"chartType": "summary",
+					"chartVariant": "with-chart",
+					"privilege": "base",
+					"colorPalette": "vibrant",
+					"opacity": 1,
+					"isResizable": false,
+					"isDraggable": false,
+					"datapointCount": 9,
+					"color": "#3acf49",
+					"options": {
+						"grid": {
+							"top": 8,
+							"right": 8,
+							"bottom": 8,
+							"left": 24
+						},
+						"xAxis": {
+							"show": false,
+							"type": "category",
+							"data": [
+								"Tue",
+								"Wed",
+								"Thu",
+								"Fri",
+								"Sat",
+								"Sun"
+							]
+						},
+						"yAxis": {
+							"show": false,
+							"type": "value"
+						},
+						"series": [
+							{
+								"data": [
+									1,
+									1,
+									1,
+									1,
+									1,
+									1
+								],
+								"type": "bar",
+								"smooth": true,
+								"color": "#3acf49"
+							}
+						]
+					}
+				},
+				{
+					"x": 8,
+					"y": 0,
+					"w": 4,
+					"h": 2,
+					"id": "61b7d4c2-9b7d-405b-b0ef-c6af31cdbd7f",
+					"title": "Wireless Endpoints",
+					"chartType": "summary",
+					"chartVariant": "with-chart",
+					"privilege": "base",
+					"colorPalette": "fuse",
+					"opacity": 1,
+					"isResizable": false,
+					"isDraggable": false,
+					"datapointCount": 9,
+					"color": "#8bc34a",
+					"options": {
+						"grid": {
+							"top": 8,
+							"right": 8,
+							"bottom": 8,
+							"left": 24
+						},
+						"xAxis": {
+							"show": false,
+							"type": "category",
+							"data": [
+								"Wed",
+								"Thu",
+								"Fri",
+								"Sat",
+								"Sun"
+							]
+						},
+						"yAxis": {
+							"show": false,
+							"type": "value"
+						},
+						"series": [
+							{
+								"data": [
+									2520,
+									2520,
+									2520,
+									2520,
+									2520
+								],
+								"type": "bar",
+								"smooth": true,
+								"color": "#8bc34a"
+							}
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 2,
+					"w": 7,
+					"h": 2,
+					"id": "c41c9903-6d76-45ba-8696-3fc3bf948569",
+					"title": "Uplink Throughput",
+					"chartType": "graph",
+					"chartVariant": "bar",
+					"privilege": "networking",
+					"colorPalette": "default",
+					"isResizable": false,
+					"isDraggable": false,
+					"opacity": 1,
+					"datapointCount": 48,
+					"options": {
+						"color": [
+							"rgba(244, 67, 54, 1)",
+							"rgba(233, 30, 99, 1)",
+							"rgba(156, 39, 176, 1)",
+							"rgba(103, 58, 183, 1)",
+							"rgba(0, 169, 244, 1)",
+							"rgba(63, 81, 181, 1)",
+							"rgba(33, 150, 243, 1)",
+							"rgba(0, 150, 136, 1)",
+							"rgba(139, 195, 74, 1)",
+							"rgba(205, 220, 57, 1)",
+							"rgba(255, 235, 59, 1)",
+							"rgba(255, 152, 0, 1)",
+							"rgba(121, 85, 72, 1)",
+							"rgba(158, 158, 158, 1)",
+							"rgba(76, 175, 80, 1)",
+							"rgba(239, 83, 79, 1)",
+							"rgba(92, 108, 191, 1)",
+							"rgba(129, 198, 131, 1)",
+							"rgba(255, 241, 118, 1)",
+							"rgba(255, 183, 77, 1)",
+							"rgba(161, 136, 126, 1)",
+							"rgba(101, 181, 245, 1)",
+							"rgba(185, 220, 215, 1)",
+							"rgba(255, 221, 184, 1)",
+							"rgba(224, 186, 230, 1)",
+							"rgba(252, 186, 204, 1)",
+							"rgba(200, 230, 200, 1)",
+							"rgba(255, 224, 177, 1)",
+							"rgba(215, 203, 200, 1)"
+						],
+						"grid": {
+							"top": "40px",
+							"bottom": 0,
+							"left": "0",
+							"right": "10px",
+							"containLabel": true
+						},
+						"legend": {
+							"type": "scroll",
+							"left": "center",
+							"textStyle": {
+								"color": "#949BB9",
+								"fontFamily": "IBM Plex Sans",
+								"fontSize": 10,
+								"fontWeight": "normal"
+							},
+							"itemGap": 20,
+							"data": [
+								"Endpoint Failed Connects Over Time",
+								"Endpoint Successful Connects Over Time"
+							]
+						},
+						"series": [
+							{
+								"type": "line",
+								"smooth": true,
+								"name": "Endpoint Failed Connects Over Time",
+								"data": [
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0
+								],
+								"itemStyle": {
+									"color": "auto"
+								},
+								"lineStyle": {
+									"color": "auto"
+								},
+								"areaStyle": {
+									"opacity": 1,
+									"color": "auto"
+								}
+							},
+							{
+								"type": "line",
+								"name": "Endpoint Successful Connects Over Time",
+								"data": [
+									0.5,
+									0.2,
+									1,
+									0.8,
+									0.1,
+									0.3,
+									0,
+									0,
+									0,
+									0.2,
+									0.5,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0.1,
+									0,
+									0,
+									0.5,
+									0,
+									0,
+									0,
+									0.8,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0,
+									0.4,
+									0.4,
+									0,
+									0,
+									0.8
+								],
+								"itemStyle": {
+									"color": "auto"
+								},
+								"lineStyle": {
+									"color": "auto"
+								}
+							}
+						],
+						"xAxis": {
+							"data": [
+								1623819591000,
+								1623820484000,
+								1623821377000,
+								1623822270000,
+								1623823163000,
+								1623824056000,
+								1623824949000,
+								1623825842000,
+								1623826735000,
+								1623827628000,
+								1623828521000,
+								1623829414000,
+								1623830307000,
+								1623831200000,
+								1623832093000,
+								1623832986000,
+								1623833879000,
+								1623834772000,
+								1623835665000,
+								1623836558000,
+								1623837451000,
+								1623838344000,
+								1623839237000,
+								1623840130000,
+								1623841023000,
+								1623841916000,
+								1623842809000,
+								1623843702000,
+								1623844595000,
+								1623845488000,
+								1623846381000,
+								1623847274000,
+								1623848167000,
+								1623849060000,
+								1623849953000,
+								1623850846000,
+								1623851739000,
+								1623852632000,
+								1623853525000,
+								1623854418000,
+								1623855311000,
+								1623856204000,
+								1623857097000,
+								1623857990000,
+								1623858883000,
+								1623859776000,
+								1623860669000,
+								1623861562000,
+								1623862455000,
+								1623863348000
+							],
+							"axisLabel": {
+								"color": "#949BB9",
+								"fontFamily": "IBM Plex Sans",
+								"fontSize": 10,
+								"fontWeight": "normal"
+							},
+							"axisPointer": {
+								"label": {}
+							}
+						},
+						"yAxis": {
+							"axisPointer": {
+								"label": {}
+							},
+							"axisLabel": {
+								"show": true,
+								"color": "#949BB9",
+								"fontFamily": "IBM Plex Sans",
+								"fontSize": 10,
+								"fontWeight": "normal"
+							},
+							"splitNumber": 8,
+							"interval": 1,
+							"min": 0,
+							"max": 0
+						}
+					}
+				},
+				{
+					"x": 7,
+					"y": 2,
+					"w": 5,
+					"h": 2,
+					"id": "fac5877c-3b6b-4d87-88ae-4256eca1bf5d",
+					"title": "Endpoint Count by OS",
+					"chartType": "pie",
+					"chartVariant": "pie",
+					"privilege": "base",
+					"colorPalette": "orange",
+					"opacity": 0.9,
+					"isResizable": false,
+					"isDraggable": false,
+					"options": {
+						"color": [
+							"rgba(244, 90, 56, 0.9)",
+							"rgba(255, 184, 2, 0.9)",
+							"rgba(255, 222, 46, 0.9)",
+							"rgba(255, 137, 110, 0.9)",
+							"rgba(198, 35, 0, 0.9)",
+							"rgba(181, 130, 0, 0.9)"
+						],
+						"legend": {
+							"type": "scroll",
+							"left": "center",
+							"textStyle": {
+								"color": "#949BB9",
+								"fontFamily": "IBM Plex Sans",
+								"fontSize": 10,
+								"fontWeight": "normal"
+							},
+							"itemGap": 20,
+							"tooltip": {
+								"show": true,
+								"trigger": "item"
+							}
+						},
+						"tooltip": {
+							"trigger": "item"
+						},
+						"grid": {
+							"top": "40px",
+							"bottom": 0,
+							"left": 0,
+							"right": 0,
+							"containLabel": true
+						},
+						"series": {
+							"type": "pie",
+							"radius": "90%",
+							"center": [
+								"50%",
+								"50%"
+							],
+							"data": [
+								{
+									"value": 1048,
+									"name": "Search Engine"
+								},
+								{
+									"value": 735,
+									"name": "Direct"
+								},
+								{
+									"value": 580,
+									"name": "Email"
+								},
+								{
+									"value": 484,
+									"name": "Union Ads"
+								},
+								{
+									"value": 300,
+									"name": "Video Ads"
+								}
+							],
+							"label": {
+								"color": "#949BB9",
+								"fontFamily": "IBM Plex Sans"
+							},
+							"top": 40
+						}
+					}
+				},
+				{
+					"x": 0,
+					"y": 4,
+					"w": 4,
+					"h": 2,
+					"id": "f87900dd-c9ea-4145-80ac-65600b9b5198",
+					"title": "Top5 Interface by Traffic",
+					"chartType": "pie",
+					"chartVariant": "doughnut",
+					"privilege": "networking",
+					"colorPalette": "vibrant",
+					"isResizable": false,
+					"isDraggable": false,
+					"opacity": 0.8,
+					"options": {
+						"color": [
+							"rgba(244, 90, 56, 0.9)",
+							"rgba(255, 184, 2, 0.9)",
+							"rgba(255, 222, 46, 0.9)",
+							"rgba(255, 137, 110, 0.9)",
+							"rgba(198, 35, 0, 0.9)",
+							"rgba(181, 130, 0, 0.9)"
+						],
+						"legend": {
+							"type": "scroll",
+							"left": "center",
+							"textStyle": {
+								"color": "#949BB9",
+								"fontFamily": "IBM Plex Sans",
+								"fontSize": 10,
+								"fontWeight": "normal"
+							},
+							"itemGap": 20,
+							"tooltip": {
+								"show": true,
+								"trigger": "item"
+							}
+						},
+						"tooltip": {
+							"trigger": "item"
+						},
+						"grid": {
+							"top": "40px",
+							"bottom": 0,
+							"left": 0,
+							"right": 0,
+							"containLabel": true
+						},
+						"series": {
+							"type": "pie",
+							"radius": [
+								"40%",
+								"90%"
+							],
+							"center": [
+								"50%",
+								"50%"
+							],
+							"data": [
+								{
+									"value": 40,
+									"name": "rose 1"
+								},
+								{
+									"value": 38,
+									"name": "rose 2"
+								},
+								{
+									"value": 32,
+									"name": "rose 3"
+								},
+								{
+									"value": 30,
+									"name": "rose 4"
+								}
+							],
+							"label": {
+								"color": "#949BB9",
+								"fontFamily": "IBM Plex Sans"
+							},
+							"top": 40
+						}
+					}
+				},
+				{
+					"x": 4,
+					"y": 4,
+					"w": 4,
+					"h": 2,
+					"id": "3bedf9e2-feaf-460d-ade1-8b142fcaab20",
+					"title": "Top Devices by Traffic",
+					"chartType": "bar",
+					"chartVariant": "vertical",
+					"privilege": "networking",
+					"colorPalette": "pastel",
+					"opacity": 0.5,
+					"isResizable": false,
+					"isDraggable": false,
+					"options": {
+						"tooltip": {
+							"trigger": "axis",
+							"axisPointer": {
+								"type": "shadow"
+							}
+						},
+						"legend": {},
+						"grid": {
+							"left": 0,
+							"right": 0,
+							"bottom": 0,
+							"containLabel": true
+						},
+						"yAxis": {
+							"type": "value",
+							"boundaryGap": [
+								0,
+								0.01
+							]
+						},
+						"xAxis": {
+							"type": "category",
+							"data": [
+								"Brazil",
+								"Indonesia",
+								"USA",
+								"India",
+								"Canada",
+								"World"
+							]
+						},
+						"series": [
+							{
+								"name": "2011",
+								"type": "bar",
+								"data": [
+									18203,
+									23489,
+									29034,
+									104970,
+									131744,
+									630230
+								]
+							},
+							{
+								"name": "2012",
+								"type": "bar",
+								"data": [
+									19325,
+									23438,
+									31000,
+									121594,
+									134141,
+									681807
+								]
+							},
+							{
+								"name": "2013",
+								"type": "bar",
+								"data": [
+									9325,
+									3438,
+									1000,
+									21594,
+									34141,
+									81807
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": 8,
+					"y": 4,
+					"w": 4,
+					"h": 2,
+					"id": "4777d2cf-0f10-4df4-ab27-e4bc2f9bbb69",
+					"title": "Endpoint Count by Vendor",
+					"chartType": "bar",
+					"chartVariant": "horizontal",
+					"privilege": "base",
+					"colorPalette": "vibrant",
+					"opacity": 0.5,
+					"isResizable": false,
+					"isDraggable": false,
+					"options": {
+						"tooltip": {
+							"trigger": "axis",
+							"axisPointer": {
+								"type": "shadow"
+							}
+						},
+						"legend": {},
+						"grid": {
+							"left": "3%",
+							"right": "4%",
+							"bottom": "3%",
+							"containLabel": true
+						},
+						"xAxis": {
+							"type": "value",
+							"boundaryGap": [
+								0,
+								0.01
+							]
+						},
+						"yAxis": {
+							"type": "category",
+							"data": [
+								"Brazil",
+								"Indonesia",
+								"USA",
+								"India",
+								"Canada",
+								"World"
+							]
+						},
+						"series": [
+							{
+								"name": "2011",
+								"type": "bar",
+								"data": [
+									18203,
+									23489,
+									29034,
+									104970,
+									131744,
+									630230
+								]
+							},
+							{
+								"name": "2012",
+								"type": "bar",
+								"data": [
+									19325,
+									23438,
+									31000,
+									121594,
+									134141,
+									681807
+								]
+							},
+							{
+								"name": "2013",
+								"type": "bar",
+								"data": [
+									9325,
+									3438,
+									1000,
+									21594,
+									34141,
+									81807
+								]
+							}
+						]
+					}
+				}
+			]
+		},
+		{
+			"id": "health",
+			"data": [
+				{
+					"x": 0,
+					"y": 0,
+					"w": 4,
+					"h": 2,
+					"id": "63241fa8-5310-4788-8445-04605242a2e3",
+					"title": "Alerts by Severity",
+					"chartType": "pie",
+					"chartVariant": "doughnut",
+					"privilege": "networking",
+					"colorPalette": "fuse",
+					"opacity": 0.8,
+					"isResizable": false,
+					"isDraggable": false
+				},
+				{
+					"x": 4,
+					"y": 0,
+					"w": 4,
+					"h": 2,
+					"id": "26c315ab-0a41-4a19-95c4-4c9a16f9cfea",
+					"title": "Events by Severity",
+					"chartType": "pie",
+					"chartVariant": "pie",
+					"privilege": "networking",
+					"colorPalette": "orange",
+					"opacity": 1,
+					"isResizable": false,
+					"isDraggable": false
+				},
+				{
+					"x": 8,
+					"y": 0,
+					"w": 4,
+					"h": 2,
+					"id": "351b95e7-2841-4e1e-9f3f-62b4c5911340",
+					"title": "Tunnels by State",
+					"chartType": "bar",
+					"chartVariant": "vertical",
+					"privilege": "networking",
+					"colorPalette": "blue",
+					"opacity": 0.8,
+					"isResizable": false,
+					"isDraggable": false
+				}
+			]
+		},
+		{
+			"id": "top10",
+			"data": []
+		}
 	]
 }

@@ -1,0 +1,47 @@
+[
+  {
+    "x": 0,
+    "y": 0,
+    "rows": 4,
+    "cols": 2,
+    "id": "63241fa8-5310-4788-8445-04605242a2e3",
+    "title": "Alerts by Severity",
+    "chartType": "pie",
+    "chartVariant": "doughnut",
+    "privilege": "networking",
+    "colorPalette": "fuse",
+    "opacity": 0.8,
+    "resizeEnabled": false,
+    "dragEnabled": false
+  },
+  {
+    "x": 4,
+    "y": 0,
+    "rows": 4,
+    "cols": 2,
+    "id": "26c315ab-0a41-4a19-95c4-4c9a16f9cfea",
+    "title": "Events by Severity",
+    "chartType": "pie",
+    "chartVariant": "pie",
+    "privilege": "networking",
+    "colorPalette": "orange",
+    "opacity": 1,
+    "resizeEnabled": false,
+    "dragEnabled": false
+  },
+  {
+    "x": 8,
+    "y": 0,
+    "rows": 4,
+    "cols": 2,
+    "id": "351b95e7-2841-4e1e-9f3f-62b4c5911340",
+    "title": "Tunnels by State",
+    "chartType": "bar",
+    "chartVariant": "vertical",
+    "privilege": "networking",
+    "colorPalette": "blue",
+    "opacity": 0.8,
+    "resizeEnabled": false,
+    "dragEnabled": false
+  }
+]

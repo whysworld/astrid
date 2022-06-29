@@ -1,0 +1,47 @@
+@grid-layout-item-bg: #ffff;
+@grid-layout-item-border-color: #d6d6d6;
+@grid-layout-item-box-shadow-color: rgb(0 0 0 / 1%);
+@grid-layout-item-title-color: #17bebb;
+@grid-layout-item-title-size: 18px;
+@grid-layout-item-action-btn-color: #000;
+
+.react-grid-item {
+  box-shadow: 0 2px 4px 0 @grid-layout-item-box-shadow-color;
+  border: solid 2px @grid-layout-item-border-color;
+  background-color: @grid-layout-item-bg;
+  border-radius: 5px;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 15px;
+    align-items: center;
+
+    .title {
+      font-weight: bold;
+      color: @grid-layout-item-title-color;
+      font-size: @grid-layout-item-title-size;
+    }
+
+    .ant-btn {
+      margin-right: -16px;
+      .anticon.anticon-more {
+        color: @grid-layout-item-action-btn-color;
+      }
+    }
+  }
+
+  .react-resizable-handle::after {
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+  }
+}
+
+.dropdown-menu-item {
+  display: flex;
+  align-items: center;
+  .anticon {
+    font-size: 24px;
+    padding-right: 16px;
+  }
+}

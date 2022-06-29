@@ -1,0 +1,16 @@
+{
+  "x": 0,
+  "y": 0,
+  "rows": 7,
+  "cols": 31,
+  "id": "4fab326e-7436-478d-9b22-2b48033959aa",
+  "title": "Device Count",
+  "chartType": "summary",
+  "chartVariant": "with-chart",
+  "datapointCount": 9,
+  "privilege": "networking",
+  "colorPalette": "vibrant",
+  "opacity": 1,
+  "resizeEnabled": false,
+  "dragEnabled": false
+}

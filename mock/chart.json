@@ -1,0 +1,109 @@
+{
+  "x": 0,
+  "y": 0,
+  "rows": 7,
+  "cols": 31,
+  "id": "4fab326e-7436-478d-9b22-2b48033959aa",
+  "title": "Device Count",
+  "chartType": "summary",
+  "chartVariant": "with-chart",
+  "chartQueries": [
+    {
+      "color": "#0b92fb",
+      "query": {
+        "apiVersion": "fanta.ws.io/v1",
+        "kind": "ChartQuery",
+        "metadata": {
+          "creationTimestamp": "2020-08-29T16:14:04.43896191Z",
+          "name": "device-up-count",
+          "namespace": "networking",
+          "resourceVersion": "1972",
+          "selfLink": "/apis/fanta.ws.io/v1/namespaces/network/chartquerys/device-up-count",
+          "uid": "a86f0462-ea12-11ea-a985-a20c0da329f5"
+        },
+        "spec": {
+          "base": {},
+          "query_info": {
+            "all_data_url": "history/{{APIGROUP}}/v1/devices?wsSelector=includeSubtree=true,rawResponse=true",
+            "all_data_url_body": "{ \"size\":20, \"query\":{ \"terms\": { \"object.status.operStatus.keyword\": [ \"up\" ] }  } }\n",
+            "base_url": "metrics/{{APIGROUP}}/v1/devices?includeSubtree=true&query=count(oper_status==0)",
+            "chart_url": "metrics/{{APIGROUP}}/v1/devices?range=true&includeSubtree=true&query=count(oper_status==0)&start={{STARTTIME}}&end={{ENDTIME}}&step={{STEP}}",
+            "prev_data_url": "metrics/{{APIGROUP}}/v1/devices?includeSubtree=true&query=((oper_status+offset+{{DURATION}})==0)",
+            "prev_url": "metrics/{{APIGROUP}}/v1/devices?includeSubtree=true&query=count((oper_status+offset+{{DURATION}})==0)",
+            "query_category": "summary",
+            "title": "Total Active Devices",
+            "total_label": "Total Active Devices",
+            "total_url": "metrics/{{APIGROUP}}/v1/devices?includeSubtree=true&query=count(oper_status==0)"
+          },
+          "template": {
+            "enable": "TemplateAutomatic"
+          }
+        },
+        "status": {
+          "base": {},
+          "template": {
+            "appliedto_locations": [
+              "/apis/fanta.ws.io/v1/locations/sjc",
+              "/apis/fanta.ws.io/v1/locations/newyork",
+              "/apis/fanta.ws.io/v1/locations/06",
+              "/apis/fanta.ws.io/v1/locations/07",
+              "/apis/fanta.ws.io/v1/locations/05",
+              "/apis/ws.io/v1/tenants/fanta"
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "query": [
+    {
+      "apiVersion": "fanta.ws.io/v1",
+      "kind": "ChartQuery",
+      "metadata": {
+        "creationTimestamp": "2020-08-29T16:14:04.43896191Z",
+        "name": "device-up-count",
+        "namespace": "networking",
+        "resourceVersion": "1972",
+        "selfLink": "/apis/fanta.ws.io/v1/namespaces/network/chartquerys/device-up-count",
+        "uid": "a86f0462-ea12-11ea-a985-a20c0da329f5"
+      },
+      "spec": {
+        "base": {},
+        "query_info": {
+          "all_data_url": "metrics/{{APIGROUP}}/v1/devices?includeSubtree=true&query=(oper_status==0)",
+          "base_url": "metrics/{{APIGROUP}}/v1/devices?includeSubtree=true&query=count(oper_status==0)",
+          "chart_url": "metrics/{{APIGROUP}}/v1/devices?range=true&includeSubtree=true&query=count(oper_status==0)&start={{STARTTIME}}&end={{ENDTIME}}&step={{STEP}}",
+          "filtered_data_url": "metrics/{{APIGROUP}}/v1/devices?includeSubtree=true&query=((oper_status+offset+{{OFFSET_IN_MIN}})==0)",
+          "prev_data_url": "metrics/{{APIGROUP}}/v1/devices?includeSubtree=true&query=((oper_status+offset+{{DURATION}})==0)",
+          "prev_url": "metrics/{{APIGROUP}}/v1/devices?includeSubtree=true&query=count((oper_status+offset+{{DURATION}})==0)",
+          "query_category": "summary",
+          "title": "Total Active Devices",
+          "total_label": "Total Active Devices",
+          "total_url": "metrics/{{APIGROUP}}/v1/devices?includeSubtree=true&query=count(oper_status==0)"
+        },
+        "template": {
+          "enable": "TemplateAutomatic"
+        }
+      },
+      "status": {
+        "base": {},
+        "template": {
+          "appliedto_locations": [
+            "/apis/fanta.ws.io/v1/locations/sjc",
+            "/apis/fanta.ws.io/v1/locations/newyork",
+            "/apis/fanta.ws.io/v1/locations/06",
+            "/apis/fanta.ws.io/v1/locations/07",
+            "/apis/fanta.ws.io/v1/locations/05",
+            "/apis/ws.io/v1/tenants/fanta"
+          ]
+        }
+      }
+    }
+  ],
+  "datapointCount": 9,
+  "privilege": "networking",
+  "colorPalette": "vibrant",
+  "opacity": 1,
+  "resizeEnabled": false,
+  "dragEnabled": false
+}

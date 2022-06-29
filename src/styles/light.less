@@ -22,6 +22,9 @@
   @color-table-pagination-text: #474747;
   @bg-table-pagination-text: #e5f2ff;
 
+  @ant-modal-title-color: #00a09e;
+  @ant-tabs-tab-active-color: #17bebb;
+
   .ant-layout-header.header {
     background-color: @bg-header;
     border-bottom: 1px solid @border-color-header;
@@ -157,6 +160,17 @@
     }
     .ant-select-item-option-content {
       color: @color-header-item;
+      display: flex;
+      align-items: center;
+
+      span.color {
+        width: 4px;
+        height: 16px;
+
+        &:last-child {
+          margin-right: 10px;
+        }
+      }
     }
     .ant-select-item-option-selected {
       background-color: @bg-selected-dropdown;
@@ -315,6 +329,27 @@
         color: @color-table-pagination-text;
         background-color: @bg-table-pagination-text;
       }
+    }
+  }
+  //ant modal
+  .ant-modal {
+    &-title {
+      color: @ant-modal-title-color;
+      font-size: 19px;
+      font-weight: 700;;
+    }
+  }
+  //ant tab
+  .ant-tabs {
+    &-tab {
+      &.ant-tabs-tab-active {
+        .ant-tabs-tab-btn {
+          color: @ant-tabs-tab-active-color;
+        }
+      }
+    }
+    &-ink-bar {
+      background-color: @ant-tabs-tab-active-color;
     }
   }
 }
